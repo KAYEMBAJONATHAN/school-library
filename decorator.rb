@@ -27,13 +27,3 @@ class TrimmerDecorator < Decorator
     @nameable.correct_name.slice(0, 10)
   end
 end
-
-person = Person.new(17, 'maximilianus', parent_permission: true)
-
-capitalize_decorator = CapitalizeDecorator.new(person)
-
-puts capitalize_decorator.correct_name
-
-trimmer_decorator = TrimmerDecorator.new(person)
-
-puts trimmer_decorator.correct_name
