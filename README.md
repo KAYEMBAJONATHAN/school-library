@@ -119,11 +119,11 @@ _[JONATHAN]_
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
-
 - OOP school library: I will refactor the code
 - OOP school library: I will preserve data
 - OOP school library: I will Add unit tests
+
+## 🔭 Future Features <a name="future-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
