@@ -44,6 +44,10 @@
 
 ### Key Features <a name="key-features"></a>
 
+- OOP school library: I will refactor the code
+- OOP school library: I will preserve data
+- OOP school library: I will Add unit tests
+
 - **[Oop-school-library]**
 
 - Add new students
