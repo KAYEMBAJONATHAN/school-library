@@ -46,6 +46,11 @@
 
 - **[Oop-school-library]**
 
+- Add new students
+- Add new teachers
+- Add new books
+- Save records of books
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -59,6 +64,11 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - `bundle install`
+
+* Visual Studio Code.
+* Ruby.
+* Robocop.
+* GitHub Account.
 
 ### Setup
 
@@ -78,13 +88,13 @@ Install this project with:
 
 To run the project execute the following command:
 
-- [N/A]
+- ruby main.rb
 
 ### Run tests
 
-To run tests, run the following command:
-
 - `rubocop --color`
+
+-run the following command to open the
 
 ### Deployment
 
