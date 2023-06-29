@@ -26,11 +26,7 @@ class App
     @person.each do |person|
       puts "#{person.class}, Name: #{person.name}, Age: #{person.age}"
 
-      if person.instance_of?(Teacher)
-        puts "Specialization: [#{person.specialization}]"
-      else
-        puts "Permission: #{person.parent_permission}"
-      end
+      puts "Specialization: [#{person.specialization}]" if person.instance_of?(Teacher)
     end
   end
 
@@ -46,12 +42,12 @@ class App
     when 1
       print 'Does the student have parent permission? [Y/N]: '
       permission = gets.chomp.downcase == 'y'
-      student = Student.new(1, age, permission, name)
+      student = Student.new(name, 1, age, permission)
       @person << student
     when 2
       print 'What is the teacher\'s specialization? '
       specialization = gets.chomp
-      teacher = Teacher.new(age, specialization, name)
+      teacher = Teacher.new(name, specialization, age)
       @person << teacher
     else
       puts 'Invalid input'
