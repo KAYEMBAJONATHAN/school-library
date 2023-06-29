@@ -44,10 +44,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-- OOP school library: I will refactor the code
-- OOP school library: I will preserve data
-- OOP school library: I will Add unit tests
-
 - **[Oop-school-library]**
 
 - Add new students
@@ -124,6 +120,10 @@ _[JONATHAN]_
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
+- OOP school library: I will refactor the code
+- OOP school library: I will preserve data
+- OOP school library: I will Add unit tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
