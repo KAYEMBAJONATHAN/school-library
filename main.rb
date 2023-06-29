@@ -1,19 +1,19 @@
 require_relative 'app'
 
 def show_menu
+  puts ''
   puts 'Please choose an option by entering a number:'
-  puts '1. List all books'
-  puts '2. List all people'
-  puts '3. Create a person'
-  puts '4. Create a book'
-  puts '5. Create a rental'
-  puts '6. List all rentals for a given person id'
-  puts '7. Exit'
-  print 'Your input: '
+  puts '1 - List all books'
+  puts '2 - List all people'
+  puts '3 - Create a person'
+  puts '4 - Create a book'
+  puts '5 - Create a rental'
+  puts '6 - List all rentals for a given person id'
+  puts '7 - Exit'
 end
 
-def process_input(app, input)
-  case input.to_i
+def select_option(selected, app)
+  case selected
   when 1
     app.list_all_books
   when 2
@@ -25,28 +25,23 @@ def process_input(app, input)
   when 5
     app.create_rental
   when 6
-    app.list_person_rentals
+    app.list_rentals_for_person
+  else
+    puts 'Invalid input'
   end
-end
-
-def invalid_option
-  puts 'Enter a valid option!'
 end
 
 def main
   app = App.new
+  puts 'Welcome to School Library App!'
   loop do
     show_menu
-    input = gets.chomp
-    process_input(app, input) if (1..7).to_a.include?(input.to_i)
-    invalid_option unless (1..7).to_a.include?(input.to_i)
-    if input.to_i == 7
-      puts 'See you soon!'
-      break
-    end
-    puts 'Enter to continue...'
-    gets
+    selected = gets.chomp.to_i
+    break if selected == 7
+
+    select_option(selected, app)
   end
+  puts 'Thank you for using this app!'
 end
 
 main
