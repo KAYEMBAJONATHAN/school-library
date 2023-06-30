@@ -1,7 +1,8 @@
 class Book
-  attr_accessor :title, :author, :rentals
+  attr_accessor :title, :author, :rentals, :id
 
   def initialize(title, author)
+    @id = SecureRandom.hex(4)
     @title = title
     @author = author
     @rentals = []

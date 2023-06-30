@@ -17,14 +17,14 @@ class App
   def list_all_books
     puts 'All Books:'
     @books.each do |book|
-      puts "Title: #{book.title}, Author: #{book.author}"
+      puts "Title: #{book.title}, Author: #{book.author}, #{book.id}"
     end
   end
 
   def list_all_people
     puts 'All People:'
     @person.each do |person|
-      puts "#{person.class}, Name: #{person.name}, Age: #{person.age}"
+      puts "UserId: #{person.id}, #{person.class}, Name: #{person.name}, Age: #{person.age}"
 
       puts "Specialization: [#{person.specialization}]" if person.instance_of?(Teacher)
     end
@@ -71,6 +71,7 @@ class App
   def create_rental
     puts 'Select book by number:'
     @books.each_with_index do |book, index|
+      puts "boodIndex #{index}"
       puts "#{index} - Title: #{book.title}, Author: #{book.author}"
     end
 
@@ -96,7 +97,7 @@ class App
       puts "#{rental.person.id}, Name: #{rental.person.name}"
     end
     puts 'Select ID:'
-    id = gets.chomp.to_i
+    id = gets.chomp
 
     puts 'All Rentals for this ID:'
     @rentals.each do |rental|
